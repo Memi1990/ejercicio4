@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ejercicio4</string>
+    <string name="fullname">Full Name</string>
+    <string name="username">Username</string>
+    <string name="Email">Email</string>
+    <string name="pass">Password</string>
+    <string name="repass">Re-type Password</string>
+    <string name="gender">Gender</string>
+    <string name="famale">Famale</string>
+    <string name="male">Male</string>
+    <string name="reg">Register</string>
+    <string name="FaceReg">Register with Facebook</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone Number</string>
+    <string name="company">Company</string>
+    <string name="ptype">phone type</string>
+    <string name="etype">email type</string>
+</resources>
