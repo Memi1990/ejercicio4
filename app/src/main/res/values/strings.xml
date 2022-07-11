@@ -16,4 +16,7 @@
     <string name="company">Company</string>
     <string name="ptype">phone type</string>
     <string name="etype">email type</string>
+    <string name="acName">Sing Up</string>
+    <string name="opt1">Opt. 1</string>
+    <string name="opt2">Opt. 2</string>
 </resources>
