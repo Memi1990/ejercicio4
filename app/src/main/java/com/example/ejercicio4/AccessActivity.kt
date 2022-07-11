@@ -1,6 +1,7 @@
 package com.example.ejercicio4
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ejercicio4.SharedPreference.Companion.prefs
@@ -13,6 +14,8 @@ class AccessActivity : AppCompatActivity() {
         b = ActivityAccessBinding.inflate(layoutInflater)
         setContentView(b.root)
         initUI()
+
+
     }
     @SuppressLint("SetTextI18n")
     fun initUI(){
@@ -33,6 +36,6 @@ class AccessActivity : AppCompatActivity() {
             |Re-type Pass: $rePass
             |Gendre: $gendre
         """.trimMargin()
-
+        b.btnAdd.setOnClickListener{startActivity(Intent(this,personalDataActivity::class.java))}
     }
 }

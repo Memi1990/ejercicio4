@@ -18,10 +18,16 @@ class MainActivity : AppCompatActivity() {
 
         b.rbtnFemale.setOnClickListener { gendre = "Famale" }
         b.rbtnMale.setOnClickListener { gendre = "Male" }
-
+        checkUserValues()
         initUI()
     }
 //    Poner en Manifest La clase SharedPreference
+    fun checkUserValues(){
+        if(prefs.getFullName().isNotEmpty()){
+        goAccess()
+        }
+    }
+//    Esta función comprueva si ya se han guardado valores.
     fun initUI(){
         b.btnReg.setOnClickListener {
             accessSharedPreferences()
@@ -34,8 +40,8 @@ class MainActivity : AppCompatActivity() {
             prefs.saveEmail(b.edMail.text.toString())
             prefs.savePassword(b.edPass.text.toString())
             prefs.saveRePass(b.edRePass.text.toString())
+            prefs.saveGendre(gendre)
             if (b.edPass.text.toString() == b.edRePass.text.toString()) {
-                prefs.saveGendre(gendre)
                 goAccess()
             } else {
                 Toast.makeText(this, "La contraseña no coincide", Toast.LENGTH_SHORT).show()
