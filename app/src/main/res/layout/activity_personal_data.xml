@@ -10,12 +10,13 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/avatar" />
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="20dp"
         android:layout_weight="1">
 
         <TableRow
@@ -25,20 +26,22 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_span="1"
                 app:srcCompat="@drawable/ic_baseline_person_24" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="wrap_content"
+                android:id="@+id/etName"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_span="4"
                 android:autofillHints=""
                 android:ems="10"
+                android:hint="@string/name"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:minHeight="48dp" />
         </TableRow>
 
         <TableRow
@@ -50,21 +53,27 @@
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_span="1"
                 app:srcCompat="@drawable/ic_baseline_phone_24" />
 
             <EditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/etPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="phone"
+                android:minHeight="48dp"
+                android:hint="@string/phone"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:prompt="@string/ptype"
+                android:entries="@array/phoneType"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
@@ -81,16 +90,22 @@
                 app:srcCompat="@drawable/ic_baseline_email_24" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/etEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:hint="@string/Email"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
             <Spinner
                 android:id="@+id/spinner2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:prompt="@string/etype"
+                android:entries="@array/emailType"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
@@ -107,14 +122,14 @@
                 app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/etAdrss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="4"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:hint="@string/address"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
         <TableRow
@@ -126,17 +141,18 @@
                 android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_span="1"
                 app:srcCompat="@drawable/ic_baseline_business_24" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/etBusiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="4"
                 android:ems="10"
+                android:hint="@string/company"
                 android:inputType="textPersonName"
-                android:text="Name"
                 tools:ignore="TouchTargetSizeCheck" />
         </TableRow>
     </TableLayout>
