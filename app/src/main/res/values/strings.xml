@@ -19,4 +19,6 @@
     <string name="acName">Sing Up</string>
     <string name="opt1">Opt. 1</string>
     <string name="opt2">Opt. 2</string>
+    <string name="back">Back</string>
+    <string name="contact">+ Contact</string>
 </resources>
